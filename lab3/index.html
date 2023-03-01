@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body onload="tabletOnload();modalController()">
+    <div class="blok">
+        <input type="text" placeholder="Производитель" id="search-text" onkeyup="tableSearch()">
+        <table border="1" id="sortable">
+            <caption>Таблица автомобилей</caption>
+            <thead>
+                <tr>
+                    <th>Производитель</th>
+                    <th>Модель</th>
+                    <th>Страна</th>
+                    <th>Цвет</th>
+                    <th data-type="number">Мощность</th>
+                </tr>
+            </thead>
+            <tbody id="dest">
+            </tbody>
+    </div>
+
+
+    <div class="modal add">
+        <div class="modal__main">
+            <div class="modal__title">
+                <div class="__modal__container">
+                    <form id="average">
+                        <label><input type="text" placeholder="Производитель" id="marka" value=""></label>
+                        <label><input type="text" placeholder="Модель" id="model" value=""></label>
+                        <label><input type="text" placeholder="Страна" id="country" value=""></label>
+                        <label><input type="text" placeholder="Цвет" id="color" value=""></label>
+                        <label><input type="text" placeholder="Мощность" id="power" value=""></label>
+                        <input type="button" onclick="addElem()" value="Добавить элемент">
+                    </form>
+                </div>
+                <button class="modal__close">x</button>
+            </div>
+        </div>
+    </div>
+    <button class="modal_add">Создать элемент</button>
+    <button class="edit_open">Создать элемент</button>
+
+    <div class="modal edit">
+        <div class="modal__main">
+            <div class="modal__title">
+                <div class="__modal__container">
+                    <form id="edit_form">
+                        <label><input type="text" class="editw" placeholder="Производитель" id="marka_e" value=""></label>
+                        <label><input type="text" class="editw" placeholder="Модель" id="model_e" value=""></label>
+                        <label><input type="text" class="editw" placeholder="Страна" id="country_e" value=""></label>
+                        <label><input type="text" class="editw" placeholder="Цвет" id="color_e" value=""></label>
+                        <label><input type="text" class="editw" placeholder="Мощность" id="power_e" value=""></label>
+                        <input type="button" onclick="" id="elem_edit" value="Сохранить">
+                        <input type="button" onclick="" id="delete" value="Удалить элемент">
+                        
+                    </form>
+                </div>
+                <button class="modal__close2" >x</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
